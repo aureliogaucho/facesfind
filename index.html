@@ -149,8 +149,6 @@
                     <option value="recognition">Reconhecimento</option>
                     <option value="watermark">Marca d’água</option>
                 </select>
-                <input id="webhookUrl" class="field" type="url" placeholder="URL do webhook">
-                <input id="watermarkText" class="field" type="text" placeholder="Texto da marca d’água (opcional)">
                 <button id="sendBtn" class="btn solid">Enviar</button>
             </div>
             <label class="drop">
@@ -185,6 +183,9 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+      window.FACESFIND_WEBHOOK_URL = "";
+    </script>
     <script type="module">
       import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.83/dist/web.js'
       Typebot.initBubble({
