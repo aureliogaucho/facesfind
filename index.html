@@ -144,6 +144,15 @@
     <section id="demo" class="demo">
         <div class="container">
             <h2>Demo</h2>
+            <div class="demo-controls">
+                <select id="demoMode" class="field">
+                    <option value="recognition">Reconhecimento</option>
+                    <option value="watermark">Marca d’água</option>
+                </select>
+                <input id="webhookUrl" class="field" type="url" placeholder="URL do webhook">
+                <input id="watermarkText" class="field" type="text" placeholder="Texto da marca d’água (opcional)">
+                <button id="sendBtn" class="btn solid">Enviar</button>
+            </div>
             <label class="drop">
                 <input type="file" id="selfieInput" accept="image/*">
                 <span>Arraste ou selecione uma selfie</span>
