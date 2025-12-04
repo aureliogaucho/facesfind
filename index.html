@@ -29,7 +29,6 @@
                 <a href="#contato">Contato</a>
             </div>
             <div class="actions">
-                <a href="#demo" class="btn ghost">Demo</a>
                 <a href="https://wa.me/5561983112000" class="btn solid">WhatsApp</a>
             </div>
         </div>
@@ -141,24 +140,7 @@
         </div>
     </section>
 
-    <section id="demo" class="demo">
-        <div class="container">
-            <h2>Demo</h2>
-            <div class="demo-controls">
-                <select id="demoMode" class="field">
-                    <option value="recognition">Reconhecimento</option>
-                    <option value="watermark">Marca d’água</option>
-                </select>
-                <button id="sendBtn" class="btn solid">Enviar</button>
-            </div>
-            <label class="drop">
-                <input type="file" id="selfieInput" accept="image/*">
-                <span>Arraste ou selecione uma selfie</span>
-            </label>
-            <div id="demoStatus" class="status"></div>
-            <div id="demoResults" class="contact-sheet"></div>
-        </div>
-    </section>
+    
 
     <section id="contato" class="contact">
         <div class="container">
@@ -183,9 +165,6 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-      window.FACESFIND_WEBHOOK_URL = "";
-    </script>
     <script type="module">
       import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.83/dist/web.js'
       Typebot.initBubble({
