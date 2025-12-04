@@ -5,5 +5,5 @@ services:
     environment:
       - WEBHOOK_UPSTREAM=https://poctypev.as2talks.com
     ports:
-      - "8080:3000"
+      - "8080:8080"
     restart: unless-stopped
