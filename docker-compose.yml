@@ -2,6 +2,8 @@ version: "3.8"
 services:
   facesfind:
     build: .
+    environment:
+      - WEBHOOK_UPSTREAM=https://poctypev.as2talks.com
     ports:
-      - "8080:80"
+      - "8080:3000"
     restart: unless-stopped
