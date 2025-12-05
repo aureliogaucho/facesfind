@@ -159,17 +159,33 @@
     </div>
 
     <script src="script.js"></script>
-    <!-- <script src="https://as2cloud.as2cloud.online/as2cloud-face-widget.js"></script> -->
+    <script src="https://as2cloud.as2cloud.online/as2cloud-face-widget.js"></script> 
     <script src="https://as2cloud.as2cloud.online/as2cloud-face-widget-floating.js"></script>
     
     <script>
-      AS2CloudFaceWidget.init({
-        empresaId: '1',
-        eventId: 17,
-        apiUrl: 'https://as2back.as2cloud.online',
-        containerId: 'as2cloud-widget',
-        imageUrl: 'https://as2back.as2cloud.online/download/WA_2086675098735109.jpeg'
-      });
+      if (window.AS2CloudFaceWidget && typeof AS2CloudFaceWidget.init === 'function') {
+        AS2CloudFaceWidget.init({
+          empresaId: '1',
+          eventId: 17,
+          apiUrl: 'https://as2back.as2cloud.online',
+          containerId: 'as2cloud-widget',
+          imageUrl: 'https://as2back.as2cloud.online/download/WA_2086675098735109.jpeg'
+        });
+      }
+    </script>
+     <script>
+      if (window.AS2CloudFloatingWidget && typeof AS2CloudFloatingWidget.init === 'function') {
+        AS2CloudFloatingWidget.init({
+            empresaId: '1',
+          eventId: 17,
+          apiUrl: 'https://as2back.as2cloud.online',
+          containerId: 'as2cloud-widget',
+          imageUrl: 'https://as2back.as2cloud.online/download/WA_2086675098735109.jpeg',
+          position: 'bottom-left',
+          buttonColor: '#1890ff',
+          buttonIcon: '📷',
+        });
+      }
     </script>
  
 
