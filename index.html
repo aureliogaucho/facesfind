@@ -130,6 +130,11 @@
         </div>
     </section>
 
+    <section id="widget" class="section">
+        <div class="container">
+            <div id="as2cloud-widget"></div>
+        </div>
+    </section>
     <section id="contato" class="contact">
         <div class="container">
             <div class="contact-card">
@@ -154,6 +159,15 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://as2cloud.as2cloud.online/as2cloud-face-widget.js"></script>
+    <script>
+      AS2CloudFaceWidget.init({
+        eventId: 4,
+        apiUrl: 'https://as2back.as2cloud.online',
+        containerId: 'as2cloud-widget',
+        imageUrl: 'https://example.com/photo.jpg'
+      });
+    </script>
     <script type="module">
       import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.83/dist/web.js'
       Typebot.initBubble({
