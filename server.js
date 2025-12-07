@@ -8,6 +8,21 @@ app.use(express.json({ limit: '20mb' }))
 
 app.get('/healthz', (req, res) => res.send('ok'))
 
+app.get('/find', async (req, res) => {
+  try {
+    const r = await fetch('https://as2cloud.online/facesfind.html')
+    if (!r.ok) {
+      res.status(502).send('upstream error')
+      return
+    }
+    const html = await r.text()
+    res.set('Content-Type', 'text/html; charset=utf-8')
+    res.send(html)
+  } catch (e) {
+    res.status(500).send('fetch failed')
+  }
+})
+
 app.use(express.static(path.join(__dirname)))
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')))
 
