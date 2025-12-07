@@ -159,9 +159,8 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="https://as2cloud.as2cloud.online/as2cloud-face-widget.js"></script> 
-    <script src="https://as2cloud.as2cloud.online/as2cloud-face-widget-floating.js"></script>
-    
+    <!-- <script src="https://as2cloud.as2cloud.online/as2cloud-face-widget.js"></script> 
+     
     <script>
       if (window.AS2CloudFaceWidget && typeof AS2CloudFaceWidget.init === 'function') {
         AS2CloudFaceWidget.init({
@@ -173,21 +172,25 @@
         });
       }
     </script>
-     <script>
-      if (window.AS2CloudFloatingWidget && typeof AS2CloudFloatingWidget.init === 'function') {
-        AS2CloudFloatingWidget.init({
-          empresaId: '1',
-          eventId: 17,
-          apiUrl: 'https://as2back.as2cloud.online',
-          containerId: 'as2cloud-widget',
-          imageUrl: 'https://as2back.as2cloud.online/download/WA_2086675098735109.jpeg',
-          position: 'bottom-left',
-          buttonColor: '#1890ff',
-          buttonIcon: '📷',
-        });
-      }
-    </script>
+     
  
+ <script src="https://as2back.as2cloud.online/as2cloud-face-widget-floating.js"></script> 
+ <script> 
+AS2CloudFloatingWidget.init({ 
+eventId: 17, // ID do evento 
+empresaId: '1', // Opcional 
+apiUrl: 'https://as2back.as2cloud.online', 
+position: 'bottom-right', // Posição do botão 
+buttonColor: '#1890ff', // Cor do botão 
+buttonIcon: '📷', // Ícone do botão 
+buttonText: 'Encontre suas fotos', // Callbacks opcionais 
+onComplete: function(data) { console.log('Reconhecimento concluído:', data);
+// Redirecionar para galeria, etc 
+ }, 
+// onError: function(error) { console.error('Erro:', error); } 
+}); 
+  </script> -->
+
 
     <script type="module">
       import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.83/dist/web.js'
