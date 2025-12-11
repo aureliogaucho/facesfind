@@ -23,6 +23,21 @@ app.get('/find', async (req, res) => {
   }
 })
 
+app.get('/faces', async (req, res) => {
+  try {
+    const r = await fetch('https://as2back.as2cloud.online/public/events/17/find.html')
+    if (!r.ok) {
+      res.status(502).send('upstream error')
+      return
+    }
+    const html = await r.text()
+    res.set('Content-Type', 'text/html; charset=utf-8')
+    res.send(html)
+  } catch (e) {
+    res.status(500).send('fetch failed')
+  }
+})
+
 app.use(express.static(path.join(__dirname)))
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')))
 
